@@ -14,9 +14,13 @@ namespace AulaPOOCelular
 
             Console.WriteLine("Tela está ligada? s/n");
             string celularLigado = Console.ReadLine();
+            
             if(celularLigado == "s" || celularLigado == "sim"){
                 xioami.ligado = true;
+            } else {
+                xioami.Ligar();
             }
+
             if(xioami.ligado){      
                 Console.WriteLine("Deseja enviar uma Mensagem? s/n");
                 xioami.mensagem = Console.ReadLine();

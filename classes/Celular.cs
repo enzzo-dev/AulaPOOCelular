@@ -7,13 +7,13 @@ namespace AulaPOOCelular.classes
         public int tamanho;
         public bool ligado;
         public string mensagem;
-        public string ligacao;
+        public bool ligacao;
 
         public bool MandarMensagem(){
             if(ligado == false){
                 return ligado == true;
             }else{
-                return ligado;
+                return ligado == false;
             }
         }
 
@@ -21,13 +21,21 @@ namespace AulaPOOCelular.classes
                     if(ligado == false){
                     return this.ligado;
                     }else{
-                    return this.ligado == true;
+                    return ligado == true;
                     }
         } 
 
         public bool Ligar(){
             return this.ligado;
         } 
+
+        public bool Desligar(){
+            if(this.ligado){
+                 return this.ligado == false;
+            } else {
+                return this.ligado == true;
+            }
+        }
 
 }
 }
